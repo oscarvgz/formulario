@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Formulario</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="keywords" content="vida saludable">
+        <meta name="author" content="Oscar Villegas">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <i>
+            <h1><mark>Formulario saludable</mark></h1>
+        </i>
+    </body>
+    <h2>Responde esta encuesta sobre comida</h2>
+    <div id="divEncuesta">
+        <form id="formEncuesta" action="#">
+            <label> 1.¿Cual es tu nombre?</label>
+            <input id="textNombre" type="text"/>
+            <br><br>
+            <label>2.¿Cual es tu fecha de nacimiento?</label>
+            <input id="textFechaNacimiento" type="date"/>
+            <br><br>
+            <label>3.Ingresa tu email:</label>
+            <input id="textEmail" type="email" />
+            <br><br>
+            <label>4.Ingresa tu contrase&ntilde;a:</label>
+            <input type="password" name="password" placeholder="Contraseña">
+            <br><br>
+            <label>5.¿Te concideras una persona sana ?</label>
+            S&iacute; <input id="rbtSanoSi" name="rbtSano" type="radio" value="s&iacute;"/> 
+            <input id="rbtSanoNo" name="rbtSano" type="radio" value="no"/>No
+            <br><br>
+            <label>6.Selecciona tus alimentos chatarra favoritos</label>
+            <br>
+            <input id="chbSabritas" type="checkbox"/>Sabritas 
+            <input id="chbCocaCola" type="checkbox"/>CocaCola
+            <input id="chbGolocinas" type="checkbox"/>Golocinas
+            <input id="chbFastFood" type="checkbox"/>FastFood
+            <br><br> 
+            <label>7.¿Que tipo de comida prefieres?</label>
+            <select id="cmbComidaPreferida">
+                <option value="VerdurasAlVapor">Verduras al vapor</option>
+                <option value="Ensaladas">Ensaladas</option>
+                <option value="Hamburguesas">Hamburguesas</option>
+                <option value="Pizza">Pizza</option>
+            </select>
+            <br><br>
+            <label>8.Haz clic aqui si quiertes recibir recetas saludables:</label>
+            <input type="button" onclick="alert('Se enviaran recetas')" value="click aqu&iacute;">
+            <br><br>
+            <label>9.Selecciona tu fruta favorita</label>
+            <select>
+                <datalist id="FrutaFav">
+                    <option value="Fresa">Fresa</option>
+                    <option value="Sandia">Sandia</option>
+                    <option value="Uvas">Uvas</option>
+                    <option value="Mango">Mango</option>
+                    <option value="Platano">Platano</option>
+                </datalist>
+            </select>
+            <br><br>
+            <label for="color">10.Seleccionael color de tu fruta favorita:</label>
+            <input type="color" id="color" name="colorFrutaFavorita">
+            <br><br>
+            <label for="formulariotime">11.Ingresa el dia y lahora en que estas llenando este formulario(dia y hora):</label>
+            <input type="datetime-local" id="formulario" name="formularioTime">
+            <br><br>
+            <label for="myfile">12.Sube un documento con tu peso y talla:</label>
+            <input type="file" id="myfile" name="myfile">
+            <br><br>
+            <label>13.¿Tienes pareja?</label>
+            S&iacute; <input id="rbtSanoSi" name="rbtSano" type="radio" value="s&iacute;"/> 
+            <input id="rbtSanoNo" name="rbtSano" type="radio" value="no"/>No
+            <br><br>
+            <label for="fnacimiento">14.Ingresa su fecha de nacimiento(mes y a&ntilde;o):</label>
+            <input type="month" id="fnacimiento" name="fnacimiento">
+            <br><br> 
+            <label for="quantity">15.Cuantas horas a la semana haces ejercicio(Entre 1 y 10):</label>
+            <input type="number" id="quantity" name="quantity" min="1" max="10"> 
+            <br><br>
+            <label for="gsearch">16.Siguenos en nuestra pagina(Buscar en Google):</label>
+            <input type="search" id="gsearch" name="gsearch">
+            <input type="submit" value="buscar">
+            <br><br>
+        </form>
+        <form oninput="x.value=parseInt(a.value)">
+            <label>17.Ingresa tu peso en kg.</label>
+            <input type="range" id="a" value="50">
+            <output name="x" for="a"></output>
+        </form>
+        <form>
+            <br>
+            <label for="telefono">18.Ingrese su numero de telefono:</label>
+            <input type="tel" id="telefono" name="telefono" placeholder="477-123-45-67" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}">
+            <br><br>
+            <label for="appt">19.Ingresa la hora en la que desayunas:</label>
+            <input type="time" id="appt" name="appt">
+            <br><br>
+            <label for="homepage">20.Agrega algun link de una pagina de vida saludable:</label>
+            <input type="url" id="homepage" name="homepage">
+            <br><br>
+            <label for="week">21.Selecciona la semana en la que empezaras tu cambio:</label>
+            <input type="week" id="week" name="week">
+            <input type="submit" value="Submit">
+            <br><br>
+            <label>22.Comentanos que cambios llevaras a cabo:</label>
+            <br><br>
+            <textarea name="message" rows="10" cols="30">
+            texto:
+            </textarea>
+            <br><br>
+            <label for="nombre">23..Nombre del encuestador:</label>
+            <input type="text" id="nombre" name="nombre"><br><br>
+            <input type="hidden" id="custId" name="custId" value="3487">
+            <input type="submit" value="Submit">
+            <br><br>
+            <label>24.Haz clic aqui si te gusto la encuesta:</label>
+            <input type="button" onclick="alert('Me gusta')" value="click aqu&iacute;">
+            <br><br>
+            <input id="btnEnviar" type="submit" value="Enviar mi respuesta"/>
+            <input id="btnLimpiar" type="reset" value="Contestar nuevamente"/>
+        </form>
+    </div>
+</html>
